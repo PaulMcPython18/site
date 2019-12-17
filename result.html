@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="jumbotron">
+<h1>Grade Predictor Result</h1>
+<h3> Results Being Displayed... </h3>
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:88%">
+
+    </div>
+  </div>
+      <hr class="my-4">
+
+    <div></div>
+
+    <div> </div>
+    <p> Result:  <b style="color: red;">{{ variable }} </b></p>
+    <div>
+    </div>
+    <p> Translated Into: <b style="color: red;"> {{ letter_pred }} </b></p>
+    <div> </div>
+    <hr class="my-4">
+
+    <h3> How does GradePredictor Predict your Grades? </h3>
+
+    <p> GradePredictor uses Machine Learning and Artificial Intelligence to make
+predictions on student performance. We have used an open source dataset with thousands of samples to make sure our prediction website is
+the best and most accurate one on the Internet. </p>
+      <p class="lead">
+            <hr class="my-4">
+
+    <a class="btn btn-primary btn-lg" href="/" role="button">Go Home!</a>
+
+  </p>
+</div>
+<p> </p>
+<footer>
+  <h6>Dataset Used: <a href="https://archive.ics.uci.edu/ml/datasets/student+performance"> Student Performance Dataset</a></h6>
+</footer>
+{% endblock %}

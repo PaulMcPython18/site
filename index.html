@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="jumbotron">
+  <h1 class="display-4">Student Grade Predictor</h1>
+  <p class="lead">Follow the directions carefully and the Student Grade Predictor will predict your grades based upon past information.</p>
+  <hr class="my-4">
+  <p>This prediction model utilizes many tools like Machine Learning and Artificial Intelligence. Click learn more to know how we produced this project.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/about" role="button">Learn more</a>
+  </p>
+  <h2>{{ notice }} </h2>
+    <p style="color: red;">{{ message }}</p>
+  <div class="">
+
+      <form method="POST" action="{{ url_for('predict')}}">
+          <p>Input Previous Grade (0-20) (0 = F-, 20 = A+)</p><input type="text" name="namequery" value=''>
+          <p> Input Previous Grade (0-20) (0 = F-, 20 = A+)</p><input type="text" name="namequery2" value=''>
+          <p>Input Studytime (1-4) </p><input type="text" name="namequery3" value=''>
+          <p> Input Failures (1-4) </p><input type="text" name="namequery4" value=''>
+          <p>Input Absences (0-93) </p><input type="text" name="namequery5" value=''>
+          <p> Internet at home? Input 0 or 1. (0 = No, 1 = Yes) </p><input type="text" name="namequery6" value=''>
+          <p> In a Relationship? Input 0 or 1 (0 = No, 1 = Yes) </p><input type="text" name="namequery7" value=''>
+          <p> Takes/Requires Education Support Input 0 or 1? (0 = No, 1 = Yes) </p><input type="text" name="namequery8" value=''>
+          <p>Family Educational Support? Input 0 or 1. (0 = No, 1 = Yes) </p><input type="text" name="namequery9" value=''>
+          <p> Takes/Requires Extra Educational Support? Input 0 or 1. (0 = No, 1 = Yes) </p><input type="text" name="namequery10" value=''>
+          <div></div>
+          <hr class="my-4">
+          <button type="submit" class="btn btn-primary"> Submit</button>
+      </form>
+
+  </div>
+</div>
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="background-color: #f2f2f2; padding: 1em 1em 1em 1em; border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;">
+  <div class="toast-header">
+    <strong class="mr-auto">GradePredictor</strong>
+    <small>Just Now</small>
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="toast-body">
+    Hello, User! Welcome to GradePredictor.
+  </div>
+</div>
+<footer>
+  <h6>Dataset Used: <a href="https://archive.ics.uci.edu/ml/datasets/student+performance"> Student Performance Dataset</a></h6>
+</footer>
+{% endblock %}

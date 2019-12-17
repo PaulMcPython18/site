@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="jumbotron">
+<h1>About GradePredictor</h1>
+<h3> What makes us special? </h3>
+    <div></div>
+          <hr class="my-4">
+<p> The GradePredictor team strives to inform students their next grades based upon past information. Users of the website can input information
+and recieve a result back as to what score they will recieve. Furthermore, GradePredictor uses Machine Learning and Artificial Intelligence to make
+predictions on student performance. We have used an open source dataset with thousands of samples to make sure our prediction website is
+the best and most accurate one on the Internet. Thank you for discovering our website!</p>
+          <hr class="my-4">
+    <div> </div>
+    <p>Click learn more to predict your grades!</p>
+      <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/" role="button">Lets find out!</a>
+
+  </p>
+</div>
+<p> </p>
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="background-color: #f2f2f2; padding: 1em 1em 1em 1em; border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;">
+  <div class="toast-header">
+    <strong class="mr-auto">GradePredictor</strong>
+    <small>Just Now</small>
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="toast-body">
+    Hello, User! We notice you are interested in our website!
+  </div>
+</div>
+</div>
+<footer>
+  <h6>Dataset Used: <a href="https://archive.ics.uci.edu/ml/datasets/student+performance"> Student Performance Dataset</a></h6>
+</footer>
+{% endblock %}
